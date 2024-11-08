@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="CSS/Style.css">
+
+</head>
+<body>
+<div class="container">
+<div class="top-mata-data">
+<div class="sort">
+	SORT BY :
+	<select name="sortBy" id="sortby" onchange="orderBy(this.value)">
+	<option value="id">ID</option>
+	<option value="name">NAME </option>
+	<option value="price">PRICE </option>
+	<option value="quantity">QUANTITY</option>
+	</select>
+	<select onchange="orderDirection(this.value)" name="sorting" id="sort">
+		<option value="desc">Discending</option>
+		<option value="asc">Ascending</option>
+	</select>
+</div>
+
+<div class="search">
+<input  id="search" type="search" name="search" placeholder="search" onkeypress="search(this.value , event)">
+</div>
+
+</div>
+<div id="product-list"></div>
+<div class="bottom-mata-data">
+<div class="pager">
+<select name="pager" id="page" onchange="change_page(this.value)">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</div>
+<div id="pagination"></div>
+</div>
+</div>
+
+<script type="text/javascript" src="JS/Product.js"></script>
+</body>
+</html>
